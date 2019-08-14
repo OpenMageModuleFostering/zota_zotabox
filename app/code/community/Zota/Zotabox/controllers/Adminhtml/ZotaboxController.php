@@ -31,16 +31,16 @@ class Zota_Zotabox_Adminhtml_ZotaboxController extends Mage_Core_Controller_Vari
     public function disconnectAction() {
 		$this->removeAccessKeyAction();
 
-    	$ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, Mage::helper('zotabox')->getDomainUrl()."/customer/access/disconnect");
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, array(
-        	'customer' => Mage::getStoreConfig('zotabox/basic/customer')
-    	));
-        $response = curl_exec($ch);
-        curl_close($ch);
+		// $ch = curl_init();
+		// curl_setopt($ch, CURLOPT_URL, Mage::helper('zotabox')->getDomainUrl()."/customer/access/disconnect");
+		// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		// curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+		// curl_setopt($ch, CURLOPT_POST, true);
+		// curl_setopt($ch, CURLOPT_POSTFIELDS, array(
+		// 	'customer' => Mage::getStoreConfig('zotabox/basic/customer')
+		// ));
+		// $response = curl_exec($ch);
+		// curl_close($ch);
 
         Mage::getSingleton('core/cookie')
         	->set('zotabox_flash_message', __('Disconnected from Zotabox successfully.'))
