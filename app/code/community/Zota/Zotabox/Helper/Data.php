@@ -1,7 +1,7 @@
 <?php
 class Zota_Zotabox_Helper_Data extends Mage_Core_Helper_Abstract
 {
-	const ZOTABOX_DOMAIN_URL = 'zotabox.local';
+	const ZOTABOX_DOMAIN_URL = 'zotabox.com';
 
 	public function getDomainUrl($subDomain = 'widgets', $protocol = 'http') {
 		return "{$protocol}://{$subDomain}." . self::ZOTABOX_DOMAIN_URL;
