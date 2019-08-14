@@ -4,7 +4,7 @@ class Zota_Zotabox_Helper_Data extends Mage_Core_Helper_Abstract
 	const ZOTABOX_DOMAIN_URL = 'zotabox.com';
 
 	public function getDomainUrl($subDomain = '', $protocol = 'https') {
-		return "{$protocol}://{$subDomain}." . self::ZOTABOX_DOMAIN_URL;
+		return "{$protocol}://" . (!empty($subDomain) ? "{$subDomain}." : "") . self::ZOTABOX_DOMAIN_URL;
 	}
 
 	public function getEmbedState() {
