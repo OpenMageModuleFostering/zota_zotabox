@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<config>
+   <sections>
+        <zotabox translate="label" module="zotabox">
+            <label><![CDATA[
+                <img id="zotabox_favicon" style="vertical-align: text-bottom;" src="" alt="" border="0" width="16" height="16" />&nbsp;&nbsp;Zotabox
+                <script>$('zotabox_favicon').src = BLANK_IMG.replace('js/spacer.gif', 'skin/zotabox/icon.png');</script>
+            ]]></label>
+            <tab>service</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>400</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <zotabox_logo translate="label">
+                    <comment><![CDATA[
+                        <h3 class="config-title">Configure your Zotabox widgets</h3>
+                    ]]></comment>
+                    <expanded>1</expanded>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </zotabox_logo>
+
+                <basic translate="label">
+                    <expanded>1</expanded>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <connect_zotabox translate="comment">
+                            <comment><![CDATA[]]></comment>
+                            <frontend_model>zotabox/adminhtml_source_system_config_connectbutton</frontend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </connect_zotabox>
+                        <disconnect_zotabox translate="comment">
+                            <comment><![CDATA[]]></comment>
+                            <frontend_model>zotabox/adminhtml_source_system_config_disconnectbutton</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </disconnect_zotabox>
+
+                        <show_embed_code_button translate="comment">
+                            <comment><![CDATA[]]></comment>
+                            <frontend_model>zotabox/adminhtml_source_system_config_showEmbedCodeButton</frontend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_embed_code_button>
+                    </fields>
+                </basic>
+
+                <advanced translate="label">
+                    <expanded>1</expanded>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <embed_script translate="label comment">
+                            <comment><![CDATA[]]></comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </embed_script>
+
+                        <save_code translate="comment">
+                            <label>Save</label>
+                            <frontend_model>zotabox/adminhtml_source_system_config_saveEmbedCodeButton</frontend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </save_code>
+                    </fields>
+                </advanced>
+            </groups>
+        </zotabox>
+    </sections>
+</config>

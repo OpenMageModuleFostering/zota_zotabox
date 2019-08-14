@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="before_body_end">
+            <block type="zotabox/script" name="zotabox_script" as="zotabox_script" translate="label">
+            	<label>Zotabox Embed Script</label>
+            	<action method="setTemplate">
+            		<template>zotabox/script.phtml</template>
+            	</action>
+            </block>
+        </reference>
+    </default>
+</layout>

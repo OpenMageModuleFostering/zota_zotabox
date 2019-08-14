@@ -1,0 +1,17 @@
+{
+    "name": "OpenMageModuleFostering/Zota_Zotabox",
+    "type": "magento-module",
+    "license": "OSL",
+    "homepage": "",
+    "description": "Dramatically Boost Your Sales/Subscribers
+with These FREE Customizable Tools for Your Website",
+    "authors": [
+    {
+        "name": "zotabox",
+        "email": "support@zotabox.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Zota_Zotabox>
+			<version>1.0.0</version>
+		</Zota_Zotabox>
+	</modules>
+
+	<global>
+		<blocks>
+			<zotabox>
+				<class>Zota_Zotabox_Block</class>
+			</zotabox>
+		</blocks>
+		<helpers>
+			<zotabox>
+				<class>Zota_Zotabox_Helper</class>
+			</zotabox>
+		</helpers>
+	</global>
+
+	<adminhtml>
+		<translate>
+			<modules>
+				<zotabox>
+					<files>
+						<default>Zota_Zotabox.csv</default>
+					</files>
+				</zotabox>
+			</modules>
+		</translate>
+	</adminhtml>
+
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<Zota_Zotabox before="Mage_Adminhtml">Zota_Zotabox_Adminhtml</Zota_Zotabox>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+	
+	<frontend>
+		<translate>
+			<modules>
+				<Zota_Zotabox>
+					<files>
+						<default>Zota_Zotabox.csv</default>
+					</files>
+				</Zota_Zotabox>
+			</modules>
+		</translate>
+		<layout>
+			<updates>
+				<zotabox>
+					<file>zotabox.xml</file>
+				</zotabox>
+			</updates>
+		</layout>
+	</frontend>
+
+	<!-- <acl>
+        <resources>
+            <admin>
+                <children>
+                    <zotabox translate="title" module="zotabox">
+                        <title>My Controller</title>
+                        <sort_order>1</sort_order>
+                        <children>
+                            <index translate="title">
+                                <title>Index Action</title>
+                                <sort_order>1</sort_order>
+                            </index>
+                        </children>
+                    </zotabox>
+                </children>
+            </admin>
+        </resources>
+    </acl> -->
+</config>

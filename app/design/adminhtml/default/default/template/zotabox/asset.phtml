@@ -1,0 +1,206 @@
+<script type="text/javascript">
+	$('config_edit_form').insert({
+		before: '<a href="http://zotabox.com" target="_zotabox"><img id="zotabox_brand" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN) ?>zotabox/logo-zotabox.png" alt="zotabox" title="Zotabox"></a>'
+	});
+
+	document.observe("dom:loaded", function() {
+		Fieldset.toggleCollapse('zotabox_advanced');
+	});
+	
+	<?php
+	$flashMessage = Mage::getSingleton("core/cookie")->get("zotabox_flash_message");
+	if (isset($flashMessage) && !empty($flashMessage)) : ?>
+		$("messages").update('<ul class="messages"><li class="success-msg"><ul><li><span><?php echo Mage::getSingleton("core/cookie")->get("zotabox_flash_message") ?></span></li></ul></li></ul>');
+	<?php endif; ?>
+</script>
+<?php Mage::getSingleton("core/cookie")->delete("zotabox_flash_message"); ?>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<style type="text/css">
+	.config-title {
+		font-size: 24px;
+		font-weight: normal;
+		margin-bottom: 0;
+		text-align: center;
+		color: #414141;
+	}
+	#content {
+		background-attachment: scroll;
+		background-clip: border-box;
+		background-color: rgba(0, 0, 0, 0);
+		background: url("<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN) ?>zotabox/bg_body.png") repeat scroll 30% 70% rgba(0, 0, 0, 0);
+		background-origin: padding-box;
+		background-repeat: repeat;
+		background-size: auto auto;
+		margin-left: 255px;
+		padding-left: 0;
+	}
+	.content-header {
+		display: none;
+	}
+	.entry-edit-head,
+	.scope-label {
+		display: none;
+	}
+	.columns .form-list,
+	.columns .form-list td.value {
+		vertical-align: middle;
+		width: 100%;
+	}
+	.form-list td.label {
+		display: none;
+	}
+	.check-actived {
+	    background: url("<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN) ?>zotabox/check.png") no-repeat scroll left 0 top -2px / 20px 20px rgba(0, 0, 0, 0);
+	    height: 20px;
+	    width: 20px;
+	    margin-left: 0;
+	    margin-right: 3px;
+	    display: inline-block;
+	}
+	.btn:hover,
+	.btn:focus {
+		outline:medium none;
+	}
+
+	.btn:focus,
+	.btn:active:focus,
+	.btn.active:focus {
+		outline:medium none;
+		outline-offset:medium none;
+	}
+
+	.btn-fancy {
+	    background-color: #e03a3a;
+	    border: medium none;
+	    border-radius: 5px;
+	    box-shadow: 0 0 0 #bc2425 inset, 0 3px 0 0 #bc2425, 0 0 2px #999999;
+	    color: white;
+	    cursor: pointer;
+	    text-decoration: none;
+	    font-family: 'Open Sans', sans-serif;
+	    font-size: 14px;
+	    font-weight: bold;
+	    padding: 10px 20px;
+	    position: relative;
+	    text-decoration: none;
+	    text-shadow: 0 1px 0 #bc2425;
+	}
+	.btn-fancy:hover, .btn-fancy:focus, .btn-fancy:active {
+		text-decoration: none;
+	    color: white;
+	}
+	.btn-fancy:active {
+		text-decoration: none;
+	    background-image: -moz-linear-gradient(center bottom , #e63e3e 0%, #c92c2c 100%);
+	    box-shadow: 0 1px 0 #ed2b2b inset, 0 2px 0 0 #851515, 0 2px 1px #999999;
+	    top: 1px;
+	}
+	.btn-fancy:active::before {
+	    box-shadow: 0 1px 0 #f06060 inset, 0 3px 0 #702d0d, 0 6px 3px #a61b1b;
+	    margin-top: -12px;
+	    top: 50%;
+	}
+
+	#config_edit_form {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 13px;
+		font-weight: 400;
+		display: block;
+		background: white;
+		width: 600px;
+		margin: 10px auto;
+		box-shadow: 2px 2px 1px 0 #d6dadd;
+		border-radius: 5px;
+	}
+	#zotabox_brand {
+		display: block;
+		margin: 10px auto;
+		padding: 12px;
+	}
+	#zotabox_zotabox_logo,
+	#zotabox_basic,
+	#zotabox_advanced {
+		border: medium none;
+		background: none;
+	}
+	#zotabox_zotabox_logo {
+		margin-bottom: 0;
+		padding-bottom: 5px;
+	}
+	#zotabox_zotabox_logo img {
+		top: 25px;
+		left: 50%;
+		margin-left: -80px;
+		position: relative;
+	}
+	#zotabox_zotabox_logo .comment {
+		padding-top: 42px;
+	}
+	#row_zotabox_basic_connect_zotabox,
+	#row_zotabox_basic_disconnect_zotabox {
+		text-align: center;
+	}
+	#row_zotabox_basic_connect_zotabox {
+		height: 45px;
+	}
+	#row_zotabox_basic_show_embed_code_button {
+		display: block;
+		margin-top: 12px;
+	}
+	#zotabox_advanced_embed_script {
+		background-color: #fef9cf;
+		display: block;
+		font-family: "Lucida Console","Lucida Sans Typewriter",Monaco,"Bitstream Vera Sans Mono",monospace;
+		font-size: 12px;
+		margin: -24px auto 5px;
+		height: auto;
+		min-height: 105px;
+		padding: 12px;
+		width: 95%;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+	}
+	#row_zotabox_advanced_save_code {
+		text-align: center;
+		height: 54px;
+	}
+
+	#connect-to-zotabox {
+		background-color: #196cca;/*#e03a3a;*/
+		-webkit-border-radius:30px;
+		-moz-border-radius:30px;
+		-o-border-radius:30px;
+		border-radius:30px;
+		-webkit-box-shadow:0 2px 0 0 #0C3563;/*#bc2425;*/
+		-moz-box-shadow:0 2px 0 0 #0C3563;/*#bc2425;*/
+		-o-box-shadow:0 2px 0 0 #0C3563;/*#bc2425;*/
+		box-shadow:0 2px 0 0 #0C3563;/*#bc2425;*/
+		text-shadow:0 1px 0 #0C3563;/*#bc2425;*/
+	}
+	#connect-to-zotabox:hover,
+	#connect-to-zotabox:focus,
+	#connect-to-zotabox:active {
+		color:#FFF;
+		background-color:#2A77CE;
+		text-decoration:none;
+	}
+	#connect-to-zotabox:active {
+		background-image:linear-gradient(bottom,#3A81D2 0%,#155CAD 100%);
+		background-image:-o-linear-gradient(bottom,#3A81D2 0%,#155CAD 100%);
+		background-image:-moz-linear-gradient(bottom,#3A81D2 0%,#155CAD 100%);
+		background-image:-webkit-linear-gradient(bottom,#3A81D2 0%,#155CAD 100%);
+		background-image:-ms-linear-gradient(bottom,#3A81D2 0%,#155CAD 100%);
+		background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0,#3A81D2),color-stop(1,#155CAD));
+		-webkit-box-shadow:inset 0 1px 0 #6099DA,0px 2px 0 0 #114B8C,0px 2px 1px #999;
+		-moz-box-shadow:inset 0 1px 0 #6099DA,0px 2px 0 0 #114B8C,0px 2px 1px #999;
+		-o-box-shadow:inset 0 1px 0 #6099DA,0px 2px 0 0 #114B8C,0px 2px 1px #999;
+		box-shadow:inset 0 1px 0 #6099DA,0px 2px 0 0 #114B8C,0px 2px 1px #999;
+	}
+	#connect-to-zotabox:active::before {
+		-webkit-box-shadow:inset 0 1px 0 #3A81D2,0px 3px 0 #155CAD,0px 6px 3px #a61b1b;
+		-moz-box-shadow:inset 0 1px 0 #3A81D2,0px 3px 0 #155CAD,0px 6px 3px #a61b1b;
+		-o-box-shadow:inset 0 1px 0 #3A81D2,0px 3px 0 #155CAD,0px 6px 3px #a61b1b;
+		box-shadow:inset 0 1px 0 #3A81D2,0px 3px 0 #155CAD,0px 6px 3px #a61b1b;
+	}
+</style>

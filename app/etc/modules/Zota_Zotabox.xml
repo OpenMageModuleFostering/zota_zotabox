@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Zota_Zotabox>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Zota_Zotabox>
+    </modules>
+</config>
