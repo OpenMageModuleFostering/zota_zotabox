@@ -14,6 +14,9 @@ class Zota_Zotabox_Block_Adminhtml_Source_System_Config_Connectbutton extends Ma
 			. "&token=" . $this->_tokenKey
 			. "&customer=" . $this->_getCustomerId()
 			. "&access=" . $accessKey
+			. "&utm_source=" . Mage::helper("core/url")->getHomeUrl()
+			. "&utm_medium=" . "magento plugin"
+			. "&utm_campaign=" . "ecommerce plugins"
 		;
 		$buttonBlock = $this->getLayout()->createBlock('zotabox/adminhtml_widget_button')
 			->setId('connect-to-zotabox')

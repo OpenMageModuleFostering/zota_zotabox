@@ -1,6 +1,6 @@
 <script type="text/javascript">
 	$('config_edit_form').insert({
-		before: '<a href="http://zotabox.com" target="_zotabox"><img id="zotabox_brand" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN) ?>zotabox/logo-zotabox.png" alt="zotabox" title="Zotabox"></a>'
+		before: '<a href="http://zotabox.com?utm_source=<?php echo Mage::helper("core/url")->getHomeUrl() ?>&utm_medium=magento plugin&utm_campaign=ecommerce plugins" target="_zotabox"><img id="zotabox_brand" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN) ?>zotabox/logo-zotabox.png" alt="zotabox" title="Zotabox"></a>'
 	});
 
 	document.observe("dom:loaded", function() {
